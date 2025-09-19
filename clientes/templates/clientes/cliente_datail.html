@@ -1,0 +1,26 @@
+{% extends "clientes/base.html" %}
+{% block title %}Detalhes do Cliente{% endblock %}
+{% block content %}
+<div class="card">
+  <div class="card-header"><h5 class="m-0">{{ cliente.nome }}</h5></div>
+  <div class="card-body">
+    <p><strong>CPF:</strong> {{ cliente.cpf }}</p>
+    <p><strong>RG:</strong> {{ cliente.rg }}</p>
+    <p><strong>Endereço:</strong> {{ cliente.endereco }}</p>
+    <p><strong>Profissão:</strong> {{ cliente.profissao|default:"—" }}</p>
+
+    <h6 class="mt-4">Rendimentos</h6>
+    <ul class="mb-0">
+      {% for r in cliente.rendimentos.all %}
+        <li><strong>{{ r.empregador }}:</strong> R$ {{ r.valor }} {% if r.observacao %}— {{ r.observacao }}{% endif %}</li>
+      {% empty %}
+        <li>Sem rendimentos informados.</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="card-footer d-flex gap-2">
+    <a class="btn btn-primary" href="{% url 'clientes:editar' cliente.pk %}">Editar</a>
+    <a class="btn btn-outline-secondary" href="{% url 'clientes:listar' %}">Voltar</a>
+  </div>
+</div>
+{% endblock %}
