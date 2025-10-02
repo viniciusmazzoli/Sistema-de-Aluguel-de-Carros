@@ -1,10 +1,20 @@
+# 🚗 Sistema de Aluguel de Carros
+
+![Django](https://img.shields.io/badge/Django-4.2-092E20?style=for-the-badge&logo=django )
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python )
+![SQLite](https://img.shields.io/badge/SQLite-3-003B57?style=for-the-badge&logo=sqlite )
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap )
+
+Projeto acadêmico desenvolvido para a disciplina de Laboratório de Desenvolvimento de Software. Trata-se de uma aplicação web completa para gestão de aluguéis de automóveis, construída com o framework Django.
+
+---
+
+## 📊 Diagramas e Planejamento
+
 ### Diagrama de Caso de Uso
-
-<img width="662" height="668" alt="image" src="https://github.com/viniciusmazzoli/Sistema-de-Aluguel-de-Carros/blob/main/diagramas/DiagramaDeCasoDeUso2.png" />
-
+![Diagrama de Caso de Uso](https://github.com/viniciusmazzoli/Sistema-de-Aluguel-de-Carros/blob/main/diagramas/DiagramaDeCasoDeUso2.png )
 
 ### Histórias de Usuário
-
 | ID    | Como (ator)                  | Eu quero                                                                                   | Para que                                                                                         |
 |-------|------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
 | US-01 | Cliente                      | Me cadastrar no sistema informando meus dados pessoais (RG, CPF, Nome, Endereço), profissão, empregadores e rendimentos | Ter acesso às funcionalidades do sistema                                                         |
@@ -19,16 +29,15 @@
 | US-10 | Agente (empresa/banco)       | Avaliar os pedidos e emitir parecer positivo ou negativo                                   | Garantir que apenas contratos viáveis avancem para execução                                       |
 | US-11 | Cliente                      | Visualizar meus contratos aprovados                                                        | Acompanhar as condições do aluguel                                                               |
 
+---
 
+## 🎬 Demonstração do Sistema
 
-# 🚗 Sistema de Aluguel de Carros
+### Fluxo Principal (Cliente e Agente)
+![Demonstração do Sistema de Aluguel](VideoProjeto/GifVideoApresentacaoSistema.gif)
 
-![Django](https://img.shields.io/badge/Django-4.2-092E20?style=for-the-badge&logo=django )
-![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python )
-![SQLite](https://img.shields.io/badge/SQLite-3-003B57?style=for-the-badge&logo=sqlite )
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap )
-
-Projeto acadêmico desenvolvido para a disciplina de Laboratório de Desenvolvimento de Software. Trata-se de uma aplicação web completa para gestão de aluguéis de automóveis, construída com o framework Django.
+### Área Administrativa (Django Admin)
+![Demonstrativo da Area Administrador do Sistema](VideoProjeto/ExecucaoAreaAdminGif.gif)
 
 ---
 
@@ -75,11 +84,6 @@ Siga os passos abaixo para configurar e rodar o ambiente de desenvolvimento.
    - Ter o [Git](https://git-scm.com/downloads ) instalado.
 
 **2. Clone o Repositório:**
-
-##Demonstrativo do Sistema
-![Demonstração do Sistema de Aluguel](VideoProjeto/GifVideoApresentacaoSistema.gif)
-
-
-
-
-
+   ```bash
+   git clone https://github.com/viniciusmazzoli/Sistema-de-Aluguel-de-Carros.git
+   cd Sistema-de-Aluguel-de-Carros
