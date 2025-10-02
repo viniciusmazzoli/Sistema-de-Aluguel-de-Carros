@@ -75,8 +75,11 @@ Siga os passos abaixo para configurar e rodar o ambiente de desenvolvimento.
    - Ter o [Git](https://git-scm.com/downloads ) instalado.
 
 **2. Clone o Repositório:**
-   ```bash
-   git clone <URL_DO_SEU_REPOSITORIO_GIT>
-   cd <NOME_DA_PASTA_DO_PROJETO>
+
+##Demonstrativo do Sistema
+![Demonstração do Sistema de Aluguel](VideoProjeto/GifVideoApresentacaoSistema.gif)
+
+
+
 
 
