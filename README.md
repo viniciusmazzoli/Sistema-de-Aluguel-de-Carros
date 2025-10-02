@@ -27,4 +27,4 @@
 
 
 ### Demonstrativo Projeto:
-![Demonstração do Projeto](VideoProjeto/VideoExecuçãoProjetoGif.gif)
+![Demonstração do Projeto](VideoProjeto/VideoExecucaoProjetoGif.gif)
