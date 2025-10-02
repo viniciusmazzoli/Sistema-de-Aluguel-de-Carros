@@ -1,21 +1,44 @@
 {% extends "base.html" %}
 {% block title %}Cadastro{% endblock %}
 {% block content %}
-<div class="row justify-content-center">
-  <div class="col-md-6">
-    <div class="card">
-      <div class="card-header">
-        <h5 class="m-0">Crie sua Conta</h5>
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="col-md-6 col-lg-5">
+    <div class="card shadow-lg border-0 rounded-3">
+      <div class="card-header text-center bg-primary text-white rounded-top">
+        <h4 class="m-0">📝 Crie sua Conta</h4>
       </div>
-      <div class="card-body">
-        <form method="post">
+      <div class="card-body p-4">
+        <form method="post" novalidate>
           {% csrf_token %}
-          {{ form.as_p }}
-          <button type="submit" class="btn btn-success w-100">Cadastrar</button>
+          
+          <!-- Aqui você pode renderizar manualmente os campos se quiser -->
+          <div class="mb-3">
+            <label for="id_username" class="form-label">Usuário</label>
+            <input type="text" name="username" id="id_username" class="form-control" placeholder="Escolha um nome de usuário" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="id_email" class="form-label">E-mail</label>
+            <input type="email" name="email" id="id_email" class="form-control" placeholder="Digite seu e-mail" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="id_password1" class="form-label">Senha</label>
+            <input type="password" name="password1" id="id_password1" class="form-control" placeholder="Crie uma senha" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="id_password2" class="form-label">Confirme sua Senha</label>
+            <input type="password" name="password2" id="id_password2" class="form-control" placeholder="Repita a senha" required>
+          </div>
+          
+          <button type="submit" class="btn btn-primary w-100 py-2">Cadastrar</button>
         </form>
       </div>
-      <div class="card-footer text-center">
-        <small>Já tem uma conta? <a href="{% url 'login' %}">Faça login</a></small>
+      <div class="card-footer text-center bg-light">
+        <small>Já tem uma conta? 
+          <a href="{% url 'login' %}" class="fw-bold text-decoration-none">Faça login</a>
+        </small>
       </div>
     </div>
   </div>
