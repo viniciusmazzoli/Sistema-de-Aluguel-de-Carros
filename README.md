@@ -18,13 +18,13 @@
 | US-09 | Agente (empresa/banco)       | Modificar pedidos de clientes                                                              | Corrigir informações inconsistentes antes da aprovação                                            |
 | US-10 | Agente (empresa/banco)       | Avaliar os pedidos e emitir parecer positivo ou negativo                                   | Garantir que apenas contratos viáveis avancem para execução                                       |
 | US-11 | Cliente                      | Visualizar meus contratos aprovados                                                        | Acompanhar as condições do aluguel                                                               |
-| US-12 | Cliente                      | Que o sistema registre a quem pertence o automóvel (cliente, empresa ou banco)             | Ter clareza sobre a titularidade no contrato                                                      |
-| US-13 | Agente (banco)               | Associar um contrato de aluguel a um contrato de crédito                                   | Formalizar o financiamento do automóvel alugado                                                  |
-| US-14 | Sistema                      | Registrar informações do automóvel (matrícula, ano, marca, modelo e placa)                 | Identificar corretamente os veículos disponíveis                                                  |
-| US-15 | Cliente                      | Consultar os automóveis disponíveis para aluguel                                           | Escolher a opção que melhor atenda às minhas necessidades                                         |
-| US-16 | Cliente                      | Acessar o sistema via navegador web                                                        | Realizar meus pedidos de qualquer lugar com Internet                                              |
-| US-17 | Agente                       | Acessar o sistema online                                                                   | Avaliar e aprovar pedidos de forma remota e integrada                                             |
 
+
+
+### Tecnologias Utilizadas
+- Python  
+- Django
 
 ### Demonstrativo Projeto:
-![Demonstração do Projeto](Sistema-de-Aluguel-de-Carros/VideoProjeto/VideoExecucaoProjetoGif.gif)
+
+
