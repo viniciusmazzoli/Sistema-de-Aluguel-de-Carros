@@ -24,3 +24,6 @@
 | US-15 | Cliente                      | Consultar os automóveis disponíveis para aluguel                                           | Escolher a opção que melhor atenda às minhas necessidades                                         |
 | US-16 | Cliente                      | Acessar o sistema via navegador web                                                        | Realizar meus pedidos de qualquer lugar com Internet                                              |
 | US-17 | Agente                       | Acessar o sistema online                                                                   | Avaliar e aprovar pedidos de forma remota e integrada                                             |
+
+
+
