@@ -21,10 +21,62 @@
 
 
 
-### Tecnologias Utilizadas
-- Python  
-- Django
+# 🚗 Sistema de Aluguel de Carros
 
-### Demonstrativo Projeto:
+![Django](https://img.shields.io/badge/Django-4.2-092E20?style=for-the-badge&logo=django )
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python )
+![SQLite](https://img.shields.io/badge/SQLite-3-003B57?style=for-the-badge&logo=sqlite )
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap )
+
+Projeto acadêmico desenvolvido para a disciplina de Laboratório de Desenvolvimento de Software. Trata-se de uma aplicação web completa para gestão de aluguéis de automóveis, construída com o framework Django.
+
+---
+
+## 📋 Funcionalidades Principais
+
+O sistema foi projetado para atender a dois tipos de usuários: **Clientes** e **Agentes**, cada um com suas próprias permissões e painéis de controle.
+
+### Para Clientes:
+-   ✅ **Cadastro e Autenticação:** Criação de conta e login seguro.
+-   🚗 **Catálogo de Veículos:** Visualização dos carros disponíveis para aluguel.
+-   📝 **Solicitação de Aluguel:** Processo simplificado para fazer um novo pedido.
+-   📊 **Dashboard Pessoal:** Acompanhamento em tempo real do status de todos os pedidos (`Em análise`, `Aprovado`, `Reprovado`, `Cancelado`).
+-   ❌ **Cancelamento de Pedidos:** Possibilidade de cancelar um pedido que ainda não foi avaliado pelo agente.
+
+### Para Agentes:
+-   ✅ **Autenticação Segura:** Login em um painel de controle exclusivo para agentes.
+-   🔍 **Dashboard de Avaliação:** Visualização de todos os pedidos de clientes que estão pendentes de análise.
+-   👍 **Aprovação de Pedidos:** Capacidade de aprovar uma solicitação, o que automaticamente gera um contrato no sistema.
+-   👎 **Reprovação de Pedidos:** Capacidade de reprovar uma solicitação, com a opção de deixar um parecer.
+-   🗂️ **Gestão de Veículos:** CRUD completo para adicionar, visualizar, editar e remover automóveis do sistema.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+*   **Backend:**
+    *   **Python:** Linguagem principal do projeto.
+    *   **Django:** Framework web robusto para desenvolvimento rápido e seguro.
+    *   **SQLite:** Banco de dados padrão para desenvolvimento com Django.
+*   **Frontend:**
+    *   **HTML5** e **CSS3**.
+    *   **Bootstrap 5:** Framework CSS para criar interfaces responsivas e modernas.
+*   **Controle de Versão:**
+    *   **Git** & **GitHub**.
+
+---
+
+## 🚀 Como Executar o Projeto Localmente
+
+Siga os passos abaixo para configurar e rodar o ambiente de desenvolvimento.
+
+**1. Pré-requisitos:**
+   - Ter o [Python 3.10+](https://www.python.org/downloads/ ) instalado.
+   - Ter o [Git](https://git-scm.com/downloads ) instalado.
+
+**2. Clone o Repositório:**
+   ```bash
+   git clone <URL_DO_SEU_REPOSITORIO_GIT>
+   cd <NOME_DA_PASTA_DO_PROJETO>
 
 
