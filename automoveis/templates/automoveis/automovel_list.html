@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Lista de Automóveis{% endblock %}
+{% block content %}
+<div class="card">
+  <div class="card-header d-flex justify-content-between align-items-center">
+    <h5 class="m-0">Automóveis</h5>
+    <a href="{% url 'automoveis:criar' %}" class="btn btn-primary">+ Novo Automóvel</a>
+  </div>
+  <div class="card-body p-0">
+    <table class="table table-striped table-hover mb-0">
+      <thead>
+        <tr>
+          <th>Placa</th>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Ano</th>
+          <th>Proprietário</th>
+          <th class="text-end">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for a in automoveis %}
+        <tr>
+          <td><a href="{% url 'automoveis:detalhar' a.pk %}">{{ a.placa }}</a></td>
+          <td>{{ a.marca }}</td>
+          <td>{{ a.modelo }}</td>
+          <td>{{ a.ano }}</td>
+          <td>{{ a.proprietario }}</td>
+          <td class="text-end">
+            <a class="btn btn-sm btn-primary" href="{% url 'automoveis:editar' a.pk %}">Editar</a>
+            <a class="btn btn-sm btn-outline-danger" href="{% url 'automoveis:excluir' a.pk %}">Excluir</a>
+          </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="6" class="text-center p-4">Nenhum automóvel cadastrado.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

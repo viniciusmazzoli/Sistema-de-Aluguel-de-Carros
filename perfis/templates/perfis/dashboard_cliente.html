@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Meu Dashboard{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h4 class="m-0">Meus Pedidos de Aluguel</h4>
+  <!-- BOTÃO ADICIONADO AQUI -->
+  <a href="{% url 'pedidos:criar' %}" class="btn btn-primary">+ Fazer Novo Pedido</a>
+</div>
+<p>Acompanhe o status dos seus pedidos abaixo.</p>
+{% include 'pedidos/partials/tabela_pedidos.html' %}
+{% endblock %}

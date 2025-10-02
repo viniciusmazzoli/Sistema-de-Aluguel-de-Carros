@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Avaliar Pedido #{{ pedido.id }}{% endblock %}
+{% block content %}
+<div class="card">
+  <div class="card-header">
+    <h5 class="m-0">Avaliar Pedido #{{ pedido.id }}</h5>
+  </div>
+  <div class="card-body">
+  <p><strong>Cliente:</strong> {{ pedido.cliente.get_full_name|default:pedido.cliente.username }}</p>
+    <p><strong>Automóvel:</strong> {{ pedido.automovel }}</p>
+    <p><strong>Data do Pedido:</strong> {{ pedido.data_pedido|date:"d/m/Y" }}</p>
+    <hr>
+    <form method="post">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="parecer" class="form-label">Parecer (Opcional)</label>
+        <textarea name="parecer" id="parecer" class="form-control" rows="3"></textarea>
+      </div>
+      <div class="d-flex justify-content-end gap-2">
+        <button type="submit" name="status" value="reprovado" class="btn btn-danger">Reprovar Pedido</button>
+        <button type="submit" name="status" value="aprovado" class="btn btn-success">Aprovar e Gerar Contrato</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

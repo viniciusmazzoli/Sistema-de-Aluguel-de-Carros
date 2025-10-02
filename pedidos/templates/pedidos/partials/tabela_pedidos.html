@@ -1,0 +1,45 @@
+<div class="card">
+  <div class="card-body p-0">
+    <table class="table table-hover mb-0">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Cliente</th>
+          <th>Automóvel</th>
+          <th>Data</th>
+          <th>Status</th>
+          <th class="text-end">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for pedido in pedidos %}
+        <tr>
+          <td>{{ pedido.id }}</td>
+         <td>{{ pedido.cliente.get_full_name|default:pedido.cliente.username }}</td>
+          <td>{{ pedido.automovel }}</td>
+          <td>{{ pedido.data_pedido|date:"d/m/Y" }}</td>
+          <td>
+            <span class="badge 
+              {% if pedido.status == 'aprovado' %}bg-success
+              {% elif pedido.status == 'reprovado' or pedido.status == 'cancelado' %}bg-danger
+              {% else %}bg-warning text-dark{% endif %}">
+              {{ pedido.get_status_display }}
+            </span>
+          </td>
+          <td class="text-end">
+            {% if user.perfil.tipo == 'agente' and pedido.status == 'analise' %}
+              <a href="{% url 'pedidos:avaliar' pedido.pk %}" class="btn btn-sm btn-primary">Avaliar</a>
+            {% elif user.perfil.tipo == 'cliente' and pedido.status == 'analise' %}
+              <a href="{% url 'pedidos:cancelar' pedido.pk %}" class="btn btn-sm btn-outline-danger">Cancelar</a>
+            {% else %}
+              <span class="text-muted small">—</span>
+            {% endif %}
+          </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="6" class="text-center p-4">Nenhum pedido encontrado.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>

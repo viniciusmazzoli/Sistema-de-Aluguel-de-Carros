@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Dashboard do Agente{% endblock %}
+{% block content %}
+<h4>Pedidos Pendentes de Avaliação</h4>
+<p>Abaixo estão os pedidos que aguardam sua análise.</p>
+{% include 'pedidos/partials/tabela_pedidos.html' %}
+{% endblock %}

@@ -1,23 +1,18 @@
-"""
-URL configuration for alugueis project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
+# alugueis/urls.py
 from django.contrib import admin
 from django.urls import path, include
+from perfis.views import login_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('clientes.urls')),  # roteia tudo do app
+    
+    # A raiz do site agora é a tela de login
+    path('', login_view, name='home'), 
+    
+    # URLs de autenticação e dashboard
+    path('contas/', include('perfis.urls')),
+
+    # Mantemos as URLs dos outros apps, mas elas serão acessadas de outras formas
+    path('automoveis/', include('automoveis.urls', namespace='automoveis')),
+    path('pedidos/', include('pedidos.urls', namespace='pedidos')),
 ]

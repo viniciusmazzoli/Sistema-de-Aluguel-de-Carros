@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Detalhes do Automóvel{% endblock %}
+{% block content %}
+<div class="card">
+  <div class="card-header"><h5 class="m-0">{{ automovel.marca }} {{ automovel.modelo }}</h5></div>
+  <div class="card-body">
+    <p><strong>Placa:</strong> {{ automovel.placa }}</p>
+    <p><strong>Matrícula:</strong> {{ automovel.matricula }}</p>
+    <p><strong>Ano:</strong> {{ automovel.ano }}</p>
+    <p><strong>Proprietário:</strong> {{ automovel.proprietario }}</p>
+  </div>
+  <div class="card-footer d-flex gap-2">
+    <a class="btn btn-primary" href="{% url 'automoveis:editar' automovel.pk %}">Editar</a>
+    <a class="btn btn-outline-secondary" href="{% url 'automoveis:listar' %}">Voltar</a>
+  </div>
+</div>
+{% endblock %}
