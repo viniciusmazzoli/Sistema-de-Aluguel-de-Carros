@@ -26,5 +26,4 @@
 | US-17 | Agente                       | Acessar o sistema online                                                                   | Avaliar e aprovar pedidos de forma remota e integrada                                             |
 
 
-### Demonstrativo Projeto:
 
